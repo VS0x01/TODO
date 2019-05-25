@@ -4,7 +4,10 @@ p This application shows you what you have to do.
     p
       | No TODOs found. You can add some...
 - else
-  table class='table'
+  div class="col-lg-4 col-lg-offset-4"
+    input type="search" id="search" onkeyup="srch()" class="form-control" placeholder="Search task"
+  br
+  table class='table' id='tt'
     thead class='thead-dark'
       th scope='col' TODO
       th scope='col' Created
