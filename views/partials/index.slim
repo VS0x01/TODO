@@ -1,0 +1,28 @@
+p This application shows you what you have to do.
+- if @tasks.empty?
+  div [class="alert alert-primary" role="alert" style="width: 50%"]
+    p
+      | No TODOs found. You can add some...
+- else
+  table class='table'
+    thead class='thead-dark'
+      th scope='col' TODO
+      th scope='col' Created
+      th scope='col' Done
+    tbody
+      - @tasks.each do |task|
+        tr id='t#{task.id}'
+          th scope='row' =task.text
+          td= task.time
+          - if task.done == "true"
+            td 
+              input [type='checkbox' name='task' onclick='check(#{task.id}, "false")' checked]
+          - else 
+            td
+              input type='checkbox' name='task' onclick='check(#{task.id}, "true")'
+          td
+            button [type='submit' onclick='remove(#{task.id})']
+              | delete
+br
+a [href='/new' class="btn btn-primary btn-lg"] 
+  | Add

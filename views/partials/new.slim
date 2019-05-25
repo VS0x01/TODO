@@ -1,0 +1,11 @@
+p Write here what you have to do.
+
+form action='/add' method='post'
+	p
+		input type='textarea' name='task[text]' placeholder="TODO"
+	/p
+		/label for='time' Created
+		/br
+		/input type='datetime-local' name='task[time]' id='time'
+
+	input type='submit' value="Add" class="btn btn-success btn-lg" style="size: 200%"
