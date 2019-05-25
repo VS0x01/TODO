@@ -2,7 +2,7 @@
 require 'sinatra'
 require 'ohm'
 require 'slim'
-require 'pry'
+#require 'pry'
 
 class TODO < Sinatra::Base
   configure do
