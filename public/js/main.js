@@ -33,7 +33,7 @@ function srch() {
   filter = input.value.toUpperCase();
   table = document.getElementById("tt");
   tr = table.getElementsByTagName("tr");
-  
+
   for (i = 0; i < tr.length; i++) {
     td = tr[i].getElementsByTagName("th")[0];
     if (td) {
