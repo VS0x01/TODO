@@ -15,6 +15,10 @@ class TODO < Sinatra::Base
 	end
   end
 
+  Thread.new {
+    system("./redis-server")
+  }
+  
   Dir["./models/*.rb"].each { |file| require file }
   require_relative './routes/app'
 
